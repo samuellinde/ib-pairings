@@ -5,12 +5,13 @@ local M = {}
 local font = resource.load_font(localized "Roboto-Medium.ttf")
 local font_size = 60
 -- local font_y = 200
-local text = 'test vs test'
+local pairings
 
 print "sub module init"
 
 local function draw_text()
-  local text_width = font:width(t, font_size)
+  local text = pairings or 'yada'
+  local text_width = font:width(text, font_size)
   local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
   font:write(font_x, font_y, text, font_size, 1,1,1,1)
@@ -31,8 +32,8 @@ function M.content_update(name)
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
     font_size = config.fontsize
-    -- text = config.text
-    -- text = resource.load_file(localized(config.ptext))
+    -- pairings = config.text
+    -- pairings = resource.load_file(localized(config.ptext))
   end
 end
 
