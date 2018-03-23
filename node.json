@@ -4,7 +4,7 @@
     {
       "title": "Text",
       "name": "text",
-      "type": "string",
+      "type": "text",
       "default": "Gregor Clegane vs Sandor Clegane"
     },{
       "title": "Y Position",
