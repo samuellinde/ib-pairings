@@ -3,15 +3,15 @@ local localized, CHILDS, CONTENTS = ...
 local M = {}
 
 local font = resource.load_font(localized "Roboto-Medium.ttf")
-local font_size = 60
-local text = ''
+local font_size = 30
+local text = 'test vs test'
 
 print "sub module init"
 
 local function draw_text(t)
   local text_width = font:width(t, font_size)
   local font_x = DEVICE_WIDTH / 2 - text_width / 2
-  local font_y = DEVICE_HEIGHT / 2 - font_size * 1.5
+  local font_y = DEVICE_HEIGHT / 2 - font_size / 2
   font:write(font_x, font_y, text, font_size, 1,1,1,1)
 end
 
