@@ -9,16 +9,16 @@ local text = 'test vs test'
 
 print "sub module init"
 
-local function draw_text(t)
+local function draw_text()
   local text_width = font:width(t, font_size)
   local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
-  font:write(font_x, font_y, t, font_size, 1,1,1,1)
+  font:write(font_x, font_y, text, font_size, 1,1,1,1)
 end
 
 function M.draw()
   gl.clear(0, 0, 0, 1)
-  draw_text(text)
+  draw_text()
 end
 
 function M.unload()
