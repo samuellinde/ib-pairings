@@ -27,12 +27,12 @@ function M.draw()
   gl.clear(0, 0, 0, 1)
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
-  local text_width = font:width(pairings, font_size)
-  local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
   -- font:write(100, 100, pairings, 60, 1,1,1,1)
   text = wrap(pairings)
   for idx, line in ipairs(text) do
+    local text_width = font:width(line, font_size)
+    local font_x = WIDTH / 2 - text_width / 2
     font:write(font_x, font_y + idx * font_size, line, font_size, 1,1,1,1)
   end
 end
