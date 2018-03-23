@@ -31,7 +31,8 @@ function M.content_update(name)
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
     font_size = config.fontsize
-    text = resource.load_file(localized(config.text))
+    text = config.text
+    -- text = resource.load_file(localized(config.ptext))
   end
 end
 
