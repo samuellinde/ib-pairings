@@ -32,7 +32,7 @@ function M.draw()
   for idx, line in ipairs(text) do
     local text_width = font:width(line, font_size)
     local font_x = WIDTH / 2 - text_width / 2
-    font:write(font_x, font_y + (idx * 1.25 * font_size), idx .. line, font_size, 1,1,1,1)
+    font:write(font_x, font_y + (idx * 1.25 * font_size), font_y .. line, font_size, 1,1,1,1)
   end
 end
 
