@@ -31,7 +31,7 @@ function M.draw()
   local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
   -- font:write(100, 100, pairings, 60, 1,1,1,1)
-  text = wrapp(pairings)
+  text = wrap(pairings)
   for idx, line in ipairs(text) do
     font:write(font_x, font_y + idx * font_size, pairings, font_size, 1,1,1,1)
   end
