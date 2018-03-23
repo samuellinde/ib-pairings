@@ -7,6 +7,11 @@
       "type": "text",
       "default": "Gregor Clegane vs Sandor Clegane"
     },{
+      "title": "Font Size",
+      "name": "fontsize",
+      "type": "integer",
+      "default": 60
+    },{
       "title": "Y Position",
       "name": "texty",
       "type": "integer",

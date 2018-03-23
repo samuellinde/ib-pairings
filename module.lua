@@ -3,7 +3,8 @@ local localized, CHILDS, CONTENTS = ...
 local M = {}
 
 local font = resource.load_font(localized "Roboto-Medium.ttf")
-local font_size = 30
+local font_size = 60
+-- local font_y = 200
 local text = 'test vs test'
 
 print "sub module init"
@@ -29,6 +30,7 @@ function M.content_update(name)
   if name == 'config.json' then
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
+    font_size = config.fontsize
     text = resource.load_file(localized(config.text))
   end
 end
