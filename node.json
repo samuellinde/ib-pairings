@@ -3,8 +3,8 @@
   "options": [
     {
       "title": "Text",
-      "name": "textblock",
-      "type": "string",
+      "name": "pairings",
+      "type": "text",
       "default": "Gregor Clegane vs Sandor Clegane"
     },{
       "title": "Font Size",

@@ -2,13 +2,15 @@ local localized, CHILDS, CONTENTS = ...
 
 local M = {}
 
+local json = import json
+
 local font = resource.load_font(localized "Roboto-Medium.ttf")
 local bg_image = resource.load_image(localized "redwedding.jpg")
 local texture = resource.create_colored_texture(0, 0, 0, 0.8)
 
 local font_size = 60
 -- local font_y = 200
-local textblock
+local pairings
 
 print "sub module init"
 
@@ -16,11 +18,11 @@ function M.draw()
   gl.clear(0, 0, 0, 1)
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
-  -- local text_width = font:width(textblock, font_size)
-  -- local font_x = WIDTH / 2 - text_width / 2
-  -- local font_y = HEIGHT / 2 - font_size / 2
-  font:write(100, 100, textblock, 60, 1,1,1,1)
-  -- font:write(font_x, font_y, 'hellooo', font_size, 1,1,1,1)
+  local text_width = font:width(pairings, font_size)
+  local font_x = WIDTH / 2 - text_width / 2
+  local font_y = HEIGHT / 2 - font_size / 2
+  -- font:write(100, 100, pairings, 60, 1,1,1,1)
+  font:write(font_x, font_y, pairings, font_size, 1,1,1,1)
 end
 
 function M.unload()
@@ -33,8 +35,8 @@ function M.content_update(name)
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
     font_size = config.fontsize
-    textblock = config.textblock
-    -- textblock = resource.load_file(localized(config.ptext))
+    pairings = config.pairings
+    -- pairings = resource.load_file(localized(config.ptext))
   end
 end
 
