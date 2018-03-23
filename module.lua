@@ -28,7 +28,7 @@ function M.draw()
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
   text = wrap(pairings)
-  local font_y = HEIGHT / 2 - (font_size * 1.25) * #text / 2
+  local font_y = HEIGHT / 2 - (font_size * 1.25 * #text) / 2
   for idx, line in ipairs(text) do
     local text_width = font:width(line, font_size)
     local font_x = WIDTH / 2 - text_width / 2
