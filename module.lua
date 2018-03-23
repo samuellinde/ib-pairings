@@ -28,7 +28,7 @@ function M.draw()
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
   for idx, line in ipairs(pairings) do
-    names = wrap(line, "\svs\s")
+    -- names = wrap(line, "\svs\s")
     local font_x = WIDTH / 2 - widest / 2
     local multiplier = idx - 1
     font:write(font_x, font_y + (multiplier * font_size * line_height), line, font_size, 1,1,1,1)
