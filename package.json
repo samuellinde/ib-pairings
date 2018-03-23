@@ -1,6 +1,6 @@
 {
-    "name": "First Player",
+    "name": "Pairings",
     "author": "Samuel Linde <samuel@linde.im>",
-    "desc": "Standard container for First Player",
-    "repository": "https://github.com/samuellinde/first-player-ib"
+    "desc": "Pairings module",
+    "repository": "https://github.com/samuellinde/ib-pairings"
 }
