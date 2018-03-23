@@ -5,21 +5,16 @@ local M = {}
 local font = resource.load_font(localized "Roboto-Medium.ttf")
 local font_size = 60
 -- local font_y = 200
-local pairings
+local pairings = 'yada'
 
 print "sub module init"
 
-local function draw_text()
-  local text = pairings or 'yada'
+function M.draw()
+  gl.clear(0, 0, 0, 1)
   local text_width = font:width(text, font_size)
   local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
-  font:write(font_x, font_y, text, font_size, 1,1,1,1)
-end
-
-function M.draw()
-  gl.clear(0, 0, 0, 1)
-  draw_text()
+  font:write(font_x, font_y, pairings, font_size, 1,1,1,1)
 end
 
 function M.unload()
