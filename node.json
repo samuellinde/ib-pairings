@@ -1,3 +1,16 @@
 {
-  "name": "Pairings"
+  "name": "Pairings",
+  "options": [
+    {
+      "title": "Text",
+      "name": "text",
+      "type": "string",
+      "default": "Gregor Clegane vs Sandor Clegane"
+    },{
+      "title": "Y Position",
+      "name": "texty",
+      "type": "integer",
+      "default": 200
+    }
+  ]
 }
