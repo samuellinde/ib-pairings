@@ -9,6 +9,8 @@ local bg_image = resource.load_image(localized "redwedding.jpg")
 local texture = resource.create_colored_texture(0, 0, 0, 0.8)
 
 local font_size = 60
+local line_height = 1.5
+
 -- local font_y = 200
 local pairings
 local widest = 0
@@ -47,7 +49,6 @@ function M.content_update(name)
     font_size = config.fontsize
     pairings = wrap(config.pairings, "[^\n]+")
 
-    local line_height = 1.5
     local font_y = HEIGHT / 2 - (font_size * line_height * #pairings) / 2
     for idx, line in ipairs(pairings) do
       local text_width = font:width(line, font_size)
