@@ -10,7 +10,7 @@ print "sub module init"
 
 local function draw_text(t)
   local text_width = font:width(t, font_size)
-  local font_x = DEVICE_WIDTH / 2 - text_width / 2
+  local font_x = WIDTH / 2 - text_width / 2
   -- local font_y = DEVICE_HEIGHT / 2 - font_size / 2
   font:write(font_x, 100, t, font_size, 1,1,1,1)
 end
