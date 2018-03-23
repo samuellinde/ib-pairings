@@ -32,7 +32,7 @@ function M.content_update(name)
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
     font_size = config.fontsize
-    -- pairings = config.text
+    pairings = config.pairings
     -- pairings = resource.load_file(localized(config.ptext))
   end
 end
