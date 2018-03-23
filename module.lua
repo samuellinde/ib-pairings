@@ -26,11 +26,11 @@ end
 
 function M.content_update(name)
   print("sub module content update", name)
-  if name == 'config.json' then
-    json_file = resource.load_file(localized(name))
-    config = json.decode(json_file)
-    text = resource.load_file(localized(config.text))
-  end
+  -- if name == 'config.json' then
+  --   json_file = resource.load_file(localized(name))
+  --   config = json.decode(json_file)
+  --   text = resource.load_file(localized(config.text))
+  -- end
 end
 
 function M.content_remove(name)
