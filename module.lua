@@ -28,12 +28,13 @@ function M.draw()
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
   text = wrap(pairings)
-  local font_y = HEIGHT / 2 - (font_size * 1.25 * #text) / 2
+  local line_height = 1.4
+  local font_y = HEIGHT / 2 - (font_size * line_height * #text) / 2
   for idx, line in ipairs(text) do
     local text_width = font:width(line, font_size)
     local font_x = WIDTH / 2 - text_width / 2
     local multiplier = idx - 1
-    font:write(font_x, font_y + (multiplier * font_size * 1.25), line, font_size, 1,1,1,1)
+    font:write(font_x, font_y + (multiplier * font_size * line_height), line, font_size, 1,1,1,1)
   end
 end
 
