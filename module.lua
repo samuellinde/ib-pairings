@@ -16,6 +16,7 @@ local function draw_text(t)
 end
 
 function M.draw()
+  gl.clear(0, 0, 0, 1)
   draw_text(text)
 end
 
