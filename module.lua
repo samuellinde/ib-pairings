@@ -25,7 +25,7 @@ end
 
 function M.content_update(name)
   print("sub module content update", name)
-  if name == 'config.json' then
+  if name == 'config.jsonnnn' then
     json_file = resource.load_file(localized(name))
     config = json.decode(json_file)
     text = resource.load_file(localized(config.text))
