@@ -1,0 +1,44 @@
+{
+  "name": "First Player",
+  "control_ui": "controls.html",
+  "options": [
+    {
+      "title": "Sonos",
+      "type": "section"
+    },{
+      "title": "Current Track",
+      "name": "playing",
+      "type": "string",
+      "default": "Chicago"
+    },{
+      "title": "Font",
+      "name": "trackfont",
+      "type": "font",
+      "default": "Roboto-Medium.ttf"
+    },{
+      "title": "Overlay Alpha",
+      "name": "alpha",
+      "type": "float",
+      "default": 1.0,
+      "ui_width": 2
+    },{
+      "title": "Font Size",
+      "name": "fontsize",
+      "type": "integer",
+      "default": 25,
+      "ui_width": 2
+    },{
+      "title": "Track X Position",
+      "name": "trackx",
+      "type": "integer",
+      "default": 20,
+      "ui_width": 4
+    },{
+      "title": "Track Y Position",
+      "name": "tracky",
+      "type": "integer",
+      "default": 20,
+      "ui_width": 4
+    }
+  ]
+}
