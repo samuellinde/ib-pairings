@@ -3,6 +3,7 @@ local localized, CHILDS, CONTENTS = ...
 local M = {}
 
 local font = resource.load_font(localized "Roboto-Medium.ttf")
+local bg_image = resource.load_image(localized "redwedding.jpg")
 local font_size = 60
 -- local font_y = 200
 local pairings = 'yada'
@@ -11,6 +12,7 @@ print "sub module init"
 
 function M.draw()
   gl.clear(0, 0, 0, 1)
+  bg_image:draw(0, 0, WIDTH, HEIGHT)
   local text_width = font:width(text, font_size)
   local font_x = WIDTH / 2 - text_width / 2
   local font_y = HEIGHT / 2 - font_size / 2
