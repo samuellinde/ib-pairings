@@ -33,7 +33,7 @@ function M.draw()
   -- font:write(100, 100, pairings, 60, 1,1,1,1)
   text = wrap(pairings)
   for idx, line in ipairs(text) do
-    font:write(font_x, font_y + idx * font_size, pairings, font_size, 1,1,1,1)
+    font:write(font_x, font_y + idx * font_size, line, font_size, 1,1,1,1)
   end
 end
 
