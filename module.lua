@@ -16,10 +16,11 @@ function M.draw()
   gl.clear(0, 0, 0, 1)
   bg_image:draw(0, 0, WIDTH, HEIGHT)
   texture:draw(0, 0, WIDTH, HEIGHT)
-  local text_width = font:width(pairings, font_size)
-  local font_x = WIDTH / 2 - text_width / 2
-  local font_y = HEIGHT / 2 - font_size / 2
-  font:write(font_x, font_y, 'hellooo', font_size, 1,1,1,1)
+  -- local text_width = font:width(pairings, font_size)
+  -- local font_x = WIDTH / 2 - text_width / 2
+  -- local font_y = HEIGHT / 2 - font_size / 2
+  font:write(100, 100, 'hellooo', 60, 1,1,1,1)
+  -- font:write(font_x, font_y, 'hellooo', font_size, 1,1,1,1)
 end
 
 function M.unload()
