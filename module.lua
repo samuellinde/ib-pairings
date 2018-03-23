@@ -2,7 +2,7 @@ local localized, CHILDS, CONTENTS = ...
 
 local M = {}
 
-local json = import json
+local json = require "json"
 
 local font = resource.load_font(localized "Roboto-Medium.ttf")
 local bg_image = resource.load_image(localized "redwedding.jpg")
